@@ -23,6 +23,7 @@ if "!command!"=="/exit" (goto exit)
 else (goto noncmd)
 
 :shutdown
+echo Стартует выключение...
 shutdown /s /t 0
 goto :eof
 
