@@ -34,6 +34,7 @@ reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v D
 echo Диспетчер задач включён. Проверка ошибок не предусмотрена.
 echo Нажмите любую клавишу для продолжения
 echo ——————————
+pause
 goto commands
 
 :taskmgr
