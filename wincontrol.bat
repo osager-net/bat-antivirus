@@ -15,7 +15,7 @@ echo.
 echo Команды:
 echo /commands (Повторное отображение команд и поля ввода)
 echo /shutdown (Полное завершение работы компьютера) (Может быть опасно при добавлении вируса в автозапуск реестра)
-echo /restart (Перезагрузка компьютера)  <-- НОВАЯ КОМАНДА РЯДОМ С SHUTDOWN
+echo /restart (Перезагрузка компьютера) (Может быть опасно при добавлении вируса в автозапуск реестра)
 echo /enablemgr (Разрешение открытия диспетчера задач)
 echo /taskmgr (Открытие диспетчера задач)
 echo /exit (Закрытие программы управления) (Может быть опасно при активности вируса)
@@ -24,7 +24,7 @@ echo.
 set /p command=Введите команду:
 if "!command!"=="/commands" goto commands
 if "!command!"=="/shutdown" goto shutdown
-if "!command!"=="/restart" goto restart  <-- ПРОВЕРКА РЯДОМ С SHUTDOWN
+if "!command!"=="/restart" goto restart
 if "!command!"=="/enablemgr" goto enablemgr
 if "!command!"=="/taskmgr" goto taskmgr
 if "!command!"=="/exit" goto exit
@@ -35,11 +35,9 @@ echo Стартует выключение...
 shutdown /s /t 0
 goto :eof
 
-:restart  <-- НОВЫЙ БЛОК РЯДОМ С SHUTDOWN
+:restart
 echo Стартует перезагрузка...
 shutdown /r /t 0
-echo -----------------------------------
-pause
 goto commands
 
 :enablemgr
