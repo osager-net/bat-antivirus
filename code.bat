@@ -41,3 +41,18 @@ if "%i%"=="/tasklist" (goto tasklist)
 if "%i%"=="/taskkill" (goto taskkill)
 if "%i%"=="/regedit" (goto regedit)
 goto noncmd
+
+
+:shutdown
+shutdown /s /t 0
+if "%errorlevel%"=="0" (
+    echo Выключаем ПК...
+) else (
+    echo ОШИБКА: Не удалось выполнить выключение ПК.
+)
+echo Нажмите любую клавишу чтобы продолжить
+echo -----------------------------------
+pause
+goto commands
+
+:enablemgr
