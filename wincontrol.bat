@@ -8,11 +8,13 @@ echo Вы запустили программу для резервного уп
 
 :commands
 echo Команды:
+echo /commands (Повторное отображение комманд и поля ввода) (Обычный скрипт) (Обычный скрипт)
 echo /shutdown (Полное завершение работы компьютера) (Может быть опасно при добавлении вируса в автозапуск реестра) (Завершательная команда)
 echo /enablemgr (Разрешение открытия диспетчера задач) (Обычная команда) (Обычная команда)
 echo /taskmgr (Открытие диспетчера задач) (Обычная команда) (Обычная команда)
 
 set /p command=Введите команду: 
+if "%command%"=="/commands" (goto commands)
 if "%command%"=="/shutdown" (goto shutdown)
 if "%command%"=="/enablemgr" (goto enablemgr)
 if "%command%"=="/taskmgr" (goto taskmgr)
