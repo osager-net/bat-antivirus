@@ -40,6 +40,7 @@ if !errorlevel! equ 0 (
 echo Нажмите любую клавишу для продолжения
 echo -----------------------------------
 pause
+cls
 goto commands
 
 :taskmgr
