@@ -60,3 +60,10 @@ if errorlevel 0 (
 goto :eof
 
 :enablemgr
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableTaskMgr /f
+if errorlevel 0 (
+    echo
+) else (
+    echo
+)
+goto next
