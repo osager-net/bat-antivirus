@@ -1,7 +1,7 @@
 @echo off
-chcp 866 >nul
+chcp 1251 >nul
 setlocal enabledelayedexpansion
-title Панель управления Windows
+title Windows Control WINDOWS
 
 cls
 echo ===============================
