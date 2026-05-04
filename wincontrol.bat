@@ -30,7 +30,12 @@ goto :eof
 
 :enablemgr
 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableTaskMgr /f
-echo Диспетчер задач включён. Проверка ошибок не предусмотрена.
+echo Проверяем ошибки разблокировки...
+if !errorlevel! equ 0 (
+    echo Диспетчер задач успешно разблокирован.
+) else (
+    echo Ошибка: диспетчер задач уже разблокирован или произошла ошибка
+)
 echo Нажмите любую клавишу для продолжения
 echo ——————————
 pause
