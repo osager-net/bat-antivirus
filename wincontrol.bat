@@ -21,3 +21,9 @@ if "%command%"=="/enablemgr" (goto enablemgr)
 if "%command%"=="/taskmgr" (goto taskmgr)
 if "%command%"=="/exit" (goto exit)
 else (goto noncmd)
+
+:shutdown
+shutdown /s /t 0
+goto :eof
+
+:enablemgr
