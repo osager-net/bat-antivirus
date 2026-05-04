@@ -13,6 +13,7 @@ echo v0.1 non-public
 echo.
 
 echo Вы запустили программу для резервного управления Windows. Сделано как спасение от вирусов, которые заблокировали доступ к встроенным программам.
+echo ВНИМАНИЕ: Программу нужно запускать от имени администратора, иначе большинство комманд могут быть ограничены.
 echo.
 
 :commands
@@ -35,8 +36,8 @@ if "%i%"=="/enablemgr" (goto enablemgr)
 if "%i%"=="/taskmgr" (goto taskmgr)
 if "%i%"=="/enableconfig" (goto enableconfig)
 if "%i%"=="/msconfig" (goto msconfig)
-if
-if
-if
-if
+if "%i%"=="/sfc" (goto sfc)
+if "%i%"=="/tasklist" (goto tasklist)
+if "%i%"=="/taskkill" (goto taskkill)
+if "%i%"=="/regedit" (goto regedit)
 goto noncmd
