@@ -1,7 +1,6 @@
 @echo off
-
-setlocal enabledelayedexpansion
 chcp 1251 >nul
+setlocal enabledelayedexpansion
 title Панель управления Windows
 
 cls
