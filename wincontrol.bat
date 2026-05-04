@@ -1,5 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
+chcp 1251 >nul
 
 echo =================================
 echo     ПАНЕЛЬ УПРАВЛЕНИЯ WINDOWS
