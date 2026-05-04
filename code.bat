@@ -11,7 +11,7 @@ echo.
 echo v0.1 non-public
 echo.
 
-echo Вы запустили программу для резервного управления Windows. Сделано для обхода вирусов, которые заблокировали доступ к встроенным программам для диагностики и конфигурации.
+echo You've launched the Windows backup management program. This is designed to bypass viruses that block access to built-in diagnostic and configuration programs.
 echo ВНИМАНИЕ: Программу нужно запускать от имени администратора, иначе большинство комманд могут быть ограничены.
 echo.
 
