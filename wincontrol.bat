@@ -15,9 +15,9 @@ echo /taskmgr (Открытие диспетчера задач) (Обычная
 echo /exit (Закрытие программы управления) (Может быть опасно при активности вируса) (Завершательная команда)
 
 set /p command=Введите команду: 
-if "%command%"=="/commands" (goto commands)
-if "%command%"=="/shutdown" (goto shutdown)
-if "%command%"=="/enablemgr" (goto enablemgr)
+if "!command!"=="/commands" (goto commands)
+if "!command!"=="/shutdown" (goto shutdown)
+if "!command!"=="/enablemgr" (goto enablemgr)
 if "%command%"=="/taskmgr" (goto taskmgr)
 if "%command%"=="/exit" (goto exit)
 else (goto noncmd)
