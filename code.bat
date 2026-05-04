@@ -62,8 +62,8 @@ goto :eof
 :enablemgr
 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableTaskMgr /f
 if errorlevel 0 (
-    echo
+    echo Блокировка открытия диспетчера задая успешно echo 
 ) else (
-    echo
+    echo ОШИБКА: Не удалось снять блокировку с диспетчера задач, или блокировка уже была снята.
 )
 goto next
