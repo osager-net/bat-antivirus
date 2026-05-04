@@ -43,6 +43,13 @@ if "%i%"=="/regedit" (goto regedit)
 goto noncmd
 
 
+:next
+echo Нажмите любую клавишу чтобы продолжить
+echo -----------------------------------
+pause
+goto commands
+
+
 :shutdown
 shutdown /s /t 0
 if errorlevel 0 (
@@ -50,9 +57,6 @@ if errorlevel 0 (
 ) else (
     echo ОШИБКА: Не удалось выполнить выключение ПК.
 )
-echo Нажмите любую клавишу чтобы продолжить
-echo -----------------------------------
-pause
-goto commands
+goto :eof
 
 :enablemgr
