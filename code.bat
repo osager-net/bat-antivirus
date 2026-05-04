@@ -1,7 +1,7 @@
 @echo off
 chcp 1251 >nul
 setlocal enabledelayedexpansion
-title Windows Control WINDOWS
+title Windows Control Panel
 
 cls
 echo ===============================
