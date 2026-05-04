@@ -45,7 +45,7 @@ goto noncmd
 
 :shutdown
 shutdown /s /t 0
-if "%errorlevel%"=="0" (
+if errorlevel 0 (
     echo Выключаем ПК...
 ) else (
     echo ОШИБКА: Не удалось выполнить выключение ПК.
