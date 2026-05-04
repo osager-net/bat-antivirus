@@ -31,7 +31,6 @@ goto :eof
 
 :enablemgr
 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableTaskMgr /f
-echo Проверяем ошибки разблокировки...
 if !errorlevel! equ 0 (
     echo Диспетчер задач успешно разблокирован.
 ) else (
@@ -47,8 +46,9 @@ goto commands
 start taskmgr.exe
 echo Диспетчер задач открыт. Если он не появился, возможно вирус заблокировал его
 echo Нажмите любую клавишу для продолжения
-echo ----------
+echo -----------------------------------
 pause
+cls
 goto commands
 
 :exit
@@ -58,6 +58,7 @@ exit
 :noncmd
 echo Команда не существует, либо допущена опечатка. Попробуйте ещё раз.
 echo Нажмите любую клавишу для продолжения
-echo ----------
+echo -----------------------------------
 pause
+cls
 goto commands
