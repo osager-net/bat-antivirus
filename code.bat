@@ -17,7 +17,7 @@ echo.
 
 :commands
 echo Commands:
-echo /commands (Повторное отображание комманд)
+echo /cmds (Повторное отображание комманд)
 echo /shutdown (Полное завершение работы компьютера)
 echo /enablemgr (Разрешение открытия диспетчера задач)
 echo /taskmgr (Открытие диспетчера задач)
