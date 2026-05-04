@@ -10,10 +10,12 @@ echo v0.1 non-public
 echo Вы запустили программу для резервного управления Windows. Сделано как спасение от вирусов, которые заблокировали доступ к встроенным программам.
 echo.
 
+
 :commands
 echo Команды:
 echo /commands (Повторное отображение команд и поля ввода)
 echo /shutdown (Полное завершение работы компьютера) (Может быть опасно при добавлении вируса в автозапуск реестра)
+echo /restart (Перезагрузка компьютера)  <-- НОВАЯ КОМАНДА РЯДОМ С SHUTDOWN
 echo /enablemgr (Разрешение открытия диспетчера задач)
 echo /taskmgr (Открытие диспетчера задач)
 echo /exit (Закрытие программы управления) (Может быть опасно при активности вируса)
@@ -22,6 +24,7 @@ echo.
 set /p command=Введите команду:
 if "!command!"=="/commands" goto commands
 if "!command!"=="/shutdown" goto shutdown
+if "!command!"=="/restart" goto restart  <-- ПРОВЕРКА РЯДОМ С SHUTDOWN
 if "!command!"=="/enablemgr" goto enablemgr
 if "!command!"=="/taskmgr" goto taskmgr
 if "!command!"=="/exit" goto exit
@@ -31,6 +34,13 @@ goto noncmd
 echo Стартует выключение...
 shutdown /s /t 0
 goto :eof
+
+:restart  <-- НОВЫЙ БЛОК РЯДОМ С SHUTDOWN
+echo Стартует перезагрузка...
+shutdown /r /t 0
+echo -----------------------------------
+pause
+goto commands
 
 :enablemgr
 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableTaskMgr /f >nul 2>&1
