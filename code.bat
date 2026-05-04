@@ -1,6 +1,7 @@
 @echo off
 chcp 1251 >nul
 chcp 866 >nul
+chcp 65001 >nul
 setlocal enabledelayedexpansion
 title Панель управления Windows
 
