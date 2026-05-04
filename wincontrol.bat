@@ -32,7 +32,7 @@ goto :eof
 :enablemgr
 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableTaskMgr /f
 echo Диспетчер задач включён. Проверка ошибок не предусмотрена.
-echo ———————————————————————
+echo ——————————
 goto commands
 
 :taskmgr
