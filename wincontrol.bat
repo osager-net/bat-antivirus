@@ -18,8 +18,8 @@ set /p command=Введите команду:
 if "!command!"=="/commands" (goto commands)
 if "!command!"=="/shutdown" (goto shutdown)
 if "!command!"=="/enablemgr" (goto enablemgr)
-if "%command%"=="/taskmgr" (goto taskmgr)
-if "%command%"=="/exit" (goto exit)
+if "!command!"=="/taskmgr" (goto taskmgr)
+if "!command!"=="/exit" (goto exit)
 else (goto noncmd)
 
 :shutdown
