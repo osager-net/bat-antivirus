@@ -29,7 +29,7 @@ echo /taskkill (Оборвание процесса)
 echo /regedit (Открытие редактора реестра Windows)
 
 set /p i="Введите комманду: "
-if "%i%"=="/commands" (goto commands)
+if "%i%"=="/restart" (goto commands)
 if "%i%"=="/shutdown" (goto shutdown)
 if "%i%"=="/enablemgr" (goto enablemgr)
 if "%i%"=="/taskmgr" (goto taskmgr)
