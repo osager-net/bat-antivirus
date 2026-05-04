@@ -31,3 +31,8 @@ reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v D
 echo Диспетчер задач включён.
 echo ———————————————————————
 goto commands
+
+:taskmgr
+start taskmgr.exe
+echo Диспетчер задач открыт. Если он не появился, возможно вирус заблокировал его
+goto commands
