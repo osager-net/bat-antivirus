@@ -281,3 +281,99 @@ start powercfg.cpl
 echo Для изменения яркости перейдите в раздел «Электропитание» → «Настройка плана электропитания» → «Изменить дополнительные параметры питания».
 pause
 goto commands
+
+:wallpaper
+set /p wallpaper_path=Введите полный путь к изображению: 
+if exist "!wallpaper_path!" (
+    reg add "HKCU\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d "!wallpaper_path!" /f >nul
+    RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters
+    echo Обои рабочего стола успешно изменены.
+) else (
+    echo Ошибка: файл не найден по указанному пути.
+)
+pause
+goto commands
+
+:screenshot
+echo Создание скриншота...
+timeout /t 2 >nul
+start snippingtool
+echo Запустите инструмент «Ножницы» для создания скриншота.
+pause
+goto commands
+
+:calc
+echo Запуск калькулятора...
+start calc
+goto commands
+
+:notepad
+echo Открытие Блокнота...
+start notepad
+goto commands
+
+:paint
+echo Запуск Paint...
+start mspaint
+goto commands
+
+:wordpad
+echo Открытие WordPad...
+start wordpad
+goto commands
+
+:snipping
+echo Запуск инструмента «Ножницы»...
+start snippingtool
+goto commands
+
+:info
+echo Вывод сведений о системе...
+echo.
+echo Операционная система:
+ver
+echo.
+echo Процессор:
+wmic cpu get name
+echo.
+echo Оперативная память:
+wmic computersystem get totalphysicalmemory
+echo.
+pause
+goto commands
+
+:time
+echo Текущее время и дата:
+echo.
+time /t
+date /t
+echo.
+pause
+goto commands
+
+:battery
+echo Статус батареи...
+powercfg /batteryreport
+echo Отчёт о батарее сохранён в текущей папке как battery-report.html
+echo Откройте файл для детальной информации.
+pause
+goto commands
+
+:diskusage
+echo Информация о дисковом пространстве...
+echo.
+wmic logicaldisk get caption,freespace,size
+echo.
+pause
+goto commands
+
+:exit
+echo Закрываем программу.
+pause
+exit
+
+:noncmd
+echo Команда "!command!" не существует или допущена опечатка. Попробуйте ещё раз.
+echo -----------------------------------
+pause
+goto commands
