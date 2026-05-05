@@ -29,6 +29,7 @@ echo /taskkill (Terminating a process)
 echo /regedit (Opening the Windows Registry Editor)
 
 set /p i="Enter the command: "
+echo.
 if "%i%"=="/restart" (goto commands)
 if "%i%"=="/shutdown" (goto shutdown)
 if "%i%"=="/enablemgr" (goto enablemgr)
