@@ -12,7 +12,7 @@ echo v0.1 non-public
 echo.
 
 echo You've launched the Windows backup management program. This is designed to bypass viruses that block access to built-in diagnostic and configuration programs.
-echo ВНИМАНИЕ: Программу нужно запускать от имени администратора, иначе большинство комманд могут быть ограничены.
+echo ATTENTION: The program must be run as administrator, otherwise most commands may be limited.
 echo.
 
 :commands
