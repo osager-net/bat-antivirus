@@ -147,3 +147,7 @@ if errorlevel 0 (
     echo ERROR: Failed to start regedit
 )
 goto next
+
+:noncmd
+echo ERROR: The command does not exist or there was a typo.
+goto next
