@@ -81,3 +81,6 @@ if errorlevel 0 (
     echo ERROR: Failed to open Task Manager. Try to unblock it or use the tasklist and taskkill commands.
 )
 goto next
+
+:enableconfig
+=== UNLOCKING MSCONFIG ===
