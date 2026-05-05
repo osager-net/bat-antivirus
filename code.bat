@@ -128,7 +128,7 @@ if errorlevel 0 (
 goto next
 
 :taskkill
-=== KILL TASK ===
+echo === KILL TASK ===
 set /p t="Enter the process: "
 taskkill /f /im %t%
 if errorlevel 0 (
