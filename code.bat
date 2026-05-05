@@ -53,7 +53,7 @@ goto commands
 echo === SHUTDOWN ===
 shutdown /s /t 0
 if errorlevel 0 (
-    echo Выключаем ПК...
+    echo We successfully turn off the PC...
 ) else (
     echo ОШИБКА: Не удалось выполнить выключение ПК.
 )
