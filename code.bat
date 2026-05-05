@@ -64,7 +64,7 @@ goto :eof
 echo === ENABLING TASK MANAGER ===
 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableTaskMgr /f
 if errorlevel 0 (
-    echo Блокировка открытия диспетчера задач успешно удалена
+    echo The block on opening Task Manager has been removed successfully
 ) else (
     echo ОШИБКА: Не удалось снять блокировку с диспетчера задач, или блокировка уже была снята.
 )
