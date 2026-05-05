@@ -123,7 +123,7 @@ tasklist
 if errorlevel 0 (
     echo The task list has been displayed successfully.
 ) else (
-    echo Unable to display tasks.
+    echo ERROR: Unable to display tasks.
 )
 goto next
 
