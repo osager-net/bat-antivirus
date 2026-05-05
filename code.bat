@@ -66,6 +66,6 @@ reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v D
 if errorlevel 0 (
     echo The block on opening Task Manager has been removed successfully
 ) else (
-    echo ОШИБКА: Не удалось снять блокировку с диспетчера задач, или блокировка уже была снята.
+    echo ERROR: Failed to unlock Task Manager, or the lock has already been unlocked.
 )
 goto next
