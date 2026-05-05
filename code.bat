@@ -94,3 +94,7 @@ goto next
 
 :enableconfig
 echo === UNLOCKING MSCONFIG ===
+reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "1" /f
+if errorlevel 0 (
+   echo Msconfig has been successfully unlocked
+) else (
