@@ -52,6 +52,16 @@ echo -----------------------------------
 goto commands
 
 
+:restart
+echo === RESTART ===
+shutdown /r /t 0
+if errorlevel 0 (
+    echo Successfully rebooting the PC...
+) else (
+    echo ERROR: Failed to restart your computer
+)
+goto :eof
+
 :shutdown
 echo === SHUTDOWN ===
 shutdown /s /t 0
