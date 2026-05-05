@@ -71,3 +71,6 @@ if errorlevel 0 (
     echo ERROR: Failed to unlock Task Manager, or the lock has already been unlocked.
 )
 goto next
+
+:taskmgr
+echo === OPEN TASK MANAGER ===
