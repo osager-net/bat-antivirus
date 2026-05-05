@@ -17,16 +17,16 @@ echo.
 
 :commands
 echo Commands:
-echo /restart (Повторное отображание комманд)
-echo /shutdown (Полное завершение работы компьютера)
-echo /enablemgr (Разрешение открытия диспетчера задач)
-echo /taskmgr (Открытие диспетчера задач)
-echo /enableconfig (Разрешение открытия программы для конфигурации системы)
-echo /msconfig (Открытие программы для конфигурации системы)
-echo /sfc (Проверка целостности файлов)
-echo /tasklist (Список работающих процессов)
-echo /taskkill (Оборвание процесса)
-echo /regedit (Открытие редактора реестра Windows)
+echo /restart (Re-display of commands)
+echo /shutdown (Complete shutdown of the computer)
+echo /enablemgr (Allowing the task manager to be opened)
+echo /taskmgr (Opening the task manager)
+echo /enableconfig (Allowing the system configuration program to be opened)
+echo /msconfig (Opening the system configuration program)
+echo /sfc (Checking the integrity of files)
+echo /tasklist (List of running processes)
+echo /taskkill (Terminating a process)
+echo /regedit (Opening the Windows Registry Editor)
 
 set /p i="Введите комманду: "
 if "%i%"=="/restart" (goto commands)
