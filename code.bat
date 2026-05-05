@@ -110,3 +110,25 @@ if errorlevel 0 (
     echo ERROR: Failed to open msconfig. Try unlocking it
 )
 goto next
+
+:sfc
+echo === CHECKING FILES VIA SFC ===
+echo Wait for the verification to complete. The program will check files for errors and damage, fix them, and then send the results to the console
+sfc /scannow
+goto next
+
+:tasklist
+echo === SHOW TASKLIST ===
+tasklist
+goto next
+
+:taskkill
+=== KILL TASK ===
+set /p t="Enter the process: "
+taskkill /f /im %t%
+goto next
+
+:regedit
+echo === START REGEDIT ===
+start regedit.exe
+if errorlevel
