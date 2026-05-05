@@ -96,5 +96,18 @@ goto next
 echo === UNLOCKING MSCONFIG ===
 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowRun" /v "1" /f
 if errorlevel 0 (
-   echo Msconfig has been successfully unlocked
+    echo Msconfig has been successfully unlocked
 ) else (
+    echo ERROR: Failed to unlock msconfig
+)
+goto next
+
+:msconfig
+echo === START MSCONFIG ===
+start msconfig.exe
+if errorlevel 0 (
+    echo Msconfig opened successfully
+) else (
+    echo ERROR: Failed to open msconfig. Try unlocking it
+)
+goto next
