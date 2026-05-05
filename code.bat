@@ -43,7 +43,7 @@ goto noncmd
 
 
 :next
-echo Нажмите любую клавишу чтобы продолжить
+echo Press any key to continue
 pause
 echo -----------------------------------
 goto commands
