@@ -132,9 +132,9 @@ goto next
 set /p t="Enter the process: "
 taskkill /f /im %t%
 if errorlevel 0 (
-    echo Процесс %t% успешно завершен
+    echo Process %t% completed successfully
 ) else (
-    echo Не удалось завершить процесс %t% или его не существует
+    echo The process %t% could not be terminated or does not exist.
 )
 goto next
 
