@@ -46,7 +46,6 @@ goto noncmd
 
 
 :next
-echo Press any key to continue
 pause
 echo -----------------------------------
 goto commands
