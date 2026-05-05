@@ -18,7 +18,7 @@ echo.
 :commands
 echo Commands:
 echo.
-echo /restart (Re-display of commands)
+echo /restart (Restart your PC)
 echo /shutdown (Complete shutdown of the computer)
 echo /enablemgr (Allowing the task manager to be opened)
 echo /taskmgr (Opening the task manager)
