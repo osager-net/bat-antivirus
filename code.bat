@@ -93,4 +93,4 @@ if errorlevel 0 (
 goto next
 
 :enableconfig
-=== UNLOCKING MSCONFIG ===
+echo === UNLOCKING MSCONFIG ===
