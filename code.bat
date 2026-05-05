@@ -134,7 +134,7 @@ taskkill /f /im %t%
 if errorlevel 0 (
     echo Process %t% completed successfully
 ) else (
-    echo The process %t% could not be terminated or does not exist.
+    echo ERROR: The process %t% could not be terminated or does not exist.
 )
 goto next
 
