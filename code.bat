@@ -8,7 +8,7 @@ echo ===========================
 echo    WINDOWS CONTROL PANEL
 echo ===========================
 echo.
-echo v0.1 non-public
+echo v0.1 public
 echo.
 
 echo You've launched the Windows backup management program. This is designed to bypass viruses that block access to built-in diagnostic and configuration programs.
