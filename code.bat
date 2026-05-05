@@ -61,6 +61,7 @@ if errorlevel 0 (
 goto :eof
 
 :enablemgr
+=== ENABLING TASK MANAGER ===
 reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v DisableTaskMgr /f
 if errorlevel 0 (
     echo Блокировка открытия диспетчера задач успешно удалена
