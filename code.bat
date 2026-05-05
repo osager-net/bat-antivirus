@@ -141,4 +141,9 @@ goto next
 :regedit
 echo === START REGEDIT ===
 start regedit.exe
-if errorlevel
+if errorlevel 0 (
+    echo Regedit has been successfully opened.
+) else (
+    echo ERROR: Failed to start regedit
+)
+goto next
