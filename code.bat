@@ -74,3 +74,10 @@ goto next
 
 :taskmgr
 echo === OPEN TASK MANAGER ===
+open taskmgr.exe
+if errorlevel 0 (
+    echo Task Manager is open
+) else (
+    echo ERROR: Failed to open Task Manager. Try to unblock it or use the tasklist and taskkill commands.
+)
+goto next
