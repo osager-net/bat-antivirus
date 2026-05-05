@@ -50,6 +50,7 @@ goto commands
 
 
 :shutdown
+echo === SHUTDOWN ===
 shutdown /s /t 0
 if errorlevel 0 (
     echo Выключаем ПК...
