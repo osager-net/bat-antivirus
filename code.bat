@@ -126,6 +126,11 @@ goto next
 === KILL TASK ===
 set /p t="Enter the process: "
 taskkill /f /im %t%
+if errorlevel 0 (
+    echo Процесс %t% успешно завершен
+) else (
+    echo Не удалось завершить процесс %t% или его не существует
+)
 goto next
 
 :regedit
