@@ -74,7 +74,7 @@ goto next
 
 :taskmgr
 echo === OPEN TASK MANAGER ===
-open taskmgr.exe
+start taskmgr.exe
 if errorlevel 0 (
     echo Task Manager is open
 ) else (
