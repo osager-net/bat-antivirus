@@ -32,7 +32,7 @@ echo /regedit (Opening the Windows Registry Editor)
 set /p i="Enter the command: "
 echo.
 echo.
-if "%i%"=="/restart" (goto commands)
+if "%i%"=="/restart" (goto restart)
 if "%i%"=="/shutdown" (goto shutdown)
 if "%i%"=="/enablemgr" (goto enablemgr)
 if "%i%"=="/taskmgr" (goto taskmgr)
